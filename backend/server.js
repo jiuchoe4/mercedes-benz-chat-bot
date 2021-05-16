@@ -1,7 +1,6 @@
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser");
-const config = require("./config/client")
 const houndifyApi = require("./api/houndify")
 
 // Bodyparser middleware
