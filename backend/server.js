@@ -2,6 +2,9 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser");
 const houndifyApi = require("./api/houndify")
+const cors = require('cors')
+
+app.use(cors())
 
 // Bodyparser middleware
 app.use(

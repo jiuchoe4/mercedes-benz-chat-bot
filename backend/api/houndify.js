@@ -89,11 +89,16 @@ router.post("/houndify", (req, res) => {
                         res.status(response.status).send(newResponse)
                     })
                     .catch(error => {
-                        if (error.response) {
-                        res.status(error.response.status).send(error.response.data);
-                        } else {
-                        res.status(500).send(error.toString());
+                        const newResponse = {
+                            "WrittenResponse": response.data.AllResults[0].WrittenResponse,
+                            "data": "randomdata"
                         }
+                        res.status(response.status).send(newResponse)
+                        // if (error.response) {
+                        // res.status(error.response.status).send(error.response.data);
+                        // } else {
+                        // res.status(500).send(error.toString());
+                        // }
                     });
             }
         })
