@@ -1,0 +1,8 @@
+POST https://api.houndify.com/v1/text
+Content-Type: application/json
+
+{
+    "query": "lock my car",
+    "Hound-Request-Authentication": "test_user;95333c00-b5d0-11eb-9c59-adfd1bd38507",
+    "Hound-Client-Authentication": "tXvUnqjBYFjv4pmVVkJ3Eg==;1621119302;i0OT4uIWNyQEykOdEM7yJbnY4DiDP3V5GmgT71QLey0="
+}
