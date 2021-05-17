@@ -7,7 +7,7 @@
 4. Install `node_modules` in frontend
 - In `/frontend/` run `npm i`
 
-#Starting the Server
+# Starting the Server
 1. Start backend server
 - In `/backend/` run `npm run dev`
 - Backend should be running on port 3001
