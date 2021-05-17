@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Chatbox from './components/Chatbox'
+import {dataExtract} from './components/dataExtract'
 
 class App extends React.Component {
   constructor(props){
@@ -12,12 +13,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({messages: ["Hi, this is your personal Mercedes-Benz assitance. How can I help you?"]})
+    this.setState({messages: ["Hi, this is your personal Mercedes-Benz assitant. How can I help you?"]})
   }
 
   handleMessage = (response) => {
     this.setState({messages: [...this.state.messages, response.userMessage]})
-    this.setState({messages: [...this.state.messages, response.WrittenResponse]})
+    let displayMessage = dataExtract(response)
+    this.setState({messages: [...this.state.messages, displayMessage]})
   }
   render() {
     return (

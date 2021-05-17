@@ -64,7 +64,10 @@ router.post("/houndify", (req, res) => {
                 })
                     .then(response1 => {
                         // Return Written Response to user
-                        res.status(response.status).send(response.data.AllResults[0].WrittenResponse);
+                        const newResponse = {
+                            "WrittenResponse": response.data.AllResults[0].WrittenResponse,
+                        }
+                        res.status(response.status).send(newResponse);
                     })
                     .catch(error => {
                         if (error.response) {
@@ -84,21 +87,17 @@ router.post("/houndify", (req, res) => {
                         // Return Written Response to user
                         const newResponse = {
                             "WrittenResponse": response.data.AllResults[0].WrittenResponse,
-                            "data": response1.data
+                            "data": response1.data,
+                            "apiAddress": apiAddress
                         }
                         res.status(response.status).send(newResponse)
                     })
                     .catch(error => {
-                        const newResponse = {
-                            "WrittenResponse": response.data.AllResults[0].WrittenResponse,
-                            "data": "randomdata"
+                        if (error.response) {
+                        res.status(error.response.status).send(error.response.data);
+                        } else {
+                        res.status(500).send(error.toString());
                         }
-                        res.status(response.status).send(newResponse)
-                        // if (error.response) {
-                        // res.status(error.response.status).send(error.response.data);
-                        // } else {
-                        // res.status(500).send(error.toString());
-                        // }
                     });
             }
         })

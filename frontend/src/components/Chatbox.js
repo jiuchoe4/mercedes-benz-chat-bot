@@ -45,6 +45,7 @@ class Chatbox extends React.Component {
                     const newResponse = { 
                         data: response.data.data,
                         WrittenResponse: response.data.WrittenResponse,
+                        apiAddress: response.data.apiAddress,
                         userMessage: this.state.message
                     }
 
