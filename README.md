@@ -20,6 +20,5 @@ A chatbot for your Mercedes-Benz vehicle.
 - Frontend server should be running on port 3000
 
 # Techonologies
-*
 - Houndify
 - Mercedes-Benz Connected Vehicle API
