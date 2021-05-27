@@ -19,6 +19,6 @@ A chatbot for your Mercedes-Benz vehicle.
 - In `/frontend/` run `npm run start`
 - Frontend server should be running on port 3000
 
-#Techonologies
+# Techonologies
 *Houndify
 *Mercedes-Benz Connected Vehicle API
