@@ -1,3 +1,6 @@
+#Mercedes-Benz Chat Bot
+A chatbot for your Mercedes-Benz vehicle.
+
 # Set-up
 1. Clone repository
 2. Install `node_modules` in backend
@@ -15,3 +18,7 @@
 2. Start frontend server
 - In `/frontend/` run `npm run start`
 - Frontend server should be running on port 3000
+
+#Techonologies
+*Houndify
+*Mercedes-Benz Connected Vehicle API
